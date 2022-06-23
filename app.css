@@ -103,9 +103,7 @@ body {
     padding: .2rem;
     vertical-align: top;
     border-top: 1px solid white;
-
     word-break: break-word;
-
 }
 
 
@@ -117,11 +115,10 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.jumpAnchor {
+.jump-anchor {
     display: inline;
     position: absolute;
     visibility: hidden;
-
     margin-top: -80px;
 }
 
@@ -160,7 +157,12 @@ body {
 
 @media (min-width: 350px) {
     .table {
-        font-size: 30%;
+        font-size: 55%;
+        font-weight: 400;
+    }
+
+    #time {
+        white-space: nowrap
     }
 }
 
