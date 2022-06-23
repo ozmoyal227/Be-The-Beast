@@ -1,0 +1,135 @@
+body {
+    background: url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    font-family: 'Secular One', sans-serif;
+}
+
+#logo {
+    height: 5em;
+}
+
+#header {
+    border-bottom: 3px ridge #e85d04;
+    background-color: black;
+}
+
+#footer {
+    border-top: 3px ridge #e85d04;
+    background-color: black;
+}
+
+#aboutUs {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.aboutContainer {
+    background-color: #6d6a7585;
+    border: 1px solid #e85d04;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px #e85d04;
+    height: 100%;
+}
+
+
+/* Calender css */
+
+#calender {
+    font-weight: bold;
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+/* css trick to change bg-image opacity */
+#calender::before {
+    content: "";
+    background-image: url(images/logo2.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.60;
+}
+
+#calenderData {
+    position: relative;
+}
+
+
+.table-bordered thead th {
+    font-size: larger;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border: 1px solid #dee2e6;
+}
+
+.bg-groups {
+    background-color: #02c2c7
+}
+
+.bg-pilatis {
+    background-color: #5bbd2a
+}
+
+.bg-women {
+    background-color: #9d60ff
+}
+
+
+.border-radius-5 {
+    border-radius: 5px;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border: 1px solid white;
+}
+
+.table td,
+.table th {
+    padding: .2rem;
+    vertical-align: top;
+    border-top: 1px solid white;
+}
+
+
+.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    /* Also define standard property for compatibility */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.jumpAnchor {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+
+    margin-top: -80px;
+}
+
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-menu {
+    background: black;
+    border: 1px solid #e85d04;
+    border-radius: 5px;
+}
