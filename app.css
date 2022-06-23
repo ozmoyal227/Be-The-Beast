@@ -133,3 +133,18 @@ body {
     border: 1px solid #e85d04;
     border-radius: 5px;
 }
+
+/* changing the default bootstrap outline effect on dropdown menu  */
+.bootstrap-select .dropdown-toggle:focus {
+    outline: none !important;
+}
+
+/* changing the default bootstrap bg color on dropdown item  */
+.dropdown-item:active {
+    background-color: #e85d04 !important;
+}
+
+/* changing the default bootstrap outline effect on accordion item  */
+.accordion-button:focus {
+    box-shadow: none;
+}
