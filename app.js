@@ -4,7 +4,52 @@ const instagramDiana = document.querySelector('#instagramDiana');
 const instagramShalom = document.querySelector('#instagramShalom');
 const callDiana = document.querySelector('#callDiana');
 const callShalom = document.querySelector('#callShalom');
+const form = document.querySelector('#contactInfo');
+const sendBtn = document.querySelector('#sendBtn');
+const closeModalButton = document.querySelector('#closeModalButton');
 
+const resParagraph = form.lastElementChild;
+
+const sendEmail = () => {
+    let msg = {
+        message: `שם מלא: ${form.elements[0].value}, 
+                  טלפון: ${form.elements[1].value},  
+                  מין: ${form.elements[2].value}, 
+                  אימון מועדף: ${form.elements[3].value}.`
+    };
+
+
+    emailjs.send('service_t15ljo9', 'template_34lhgz6', msg)
+        .then(function (res) {
+            console.log('success', res.status);
+            const successMsg = 'פרטיך התקבלו בהצלחה, תודה!';
+            resParagraph.innerText = successMsg;
+
+        })
+        .catch(function (res) {
+            console.log('error sending info', res.status);
+            const errorMsg = 'חלה שגיאה בשליחת הפרטים, יש לנסות במועד מאוחר יותר.';
+            resParagraph.innerText = errorMsg;
+        })
+}
+
+closeModalButton.addEventListener('click', function () {
+    resParagraph.innerText = '';
+});
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    sendEmail();
+    for (let element of form.elements)
+        element.value = '';
+});
+
+
+sendBtn.addEventListener('click', function () {
+    const successMsg = 'פרטיך התקבלו בהצלחה, תודה!';
+    const errorMsg = 'חלה שגיאה בשליחת הפרטים, יש לנסות במועד מאוחר יותר.';
+
+});
 
 facebookDiana.addEventListener('mouseenter', function () {
     facebookDiana.style.boxShadow = '0 4px 2px -2px blue';
