@@ -36,9 +36,8 @@ body {
 }
 
 .contact-bg {
-    height: 10vh;
+    height: 4em;
     padding-left: 0em;
-
 }
 
 #footer {
@@ -196,7 +195,7 @@ body {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
-
+/* changing sizes according to screen width */
 @media (min-width: 350px) {
     .table {
         font-size: 55%;
@@ -206,10 +205,6 @@ body {
     #time {
         white-space: nowrap
     }
-
-    .contact-bg {
-        background: linear-gradient(110deg, #ffb03a 70%, black 60%);
-    }
 }
 
 @media (min-width: 768px) {
@@ -218,6 +213,50 @@ body {
     }
 
     .contact-bg {
-        background: linear-gradient(110deg, #ffb03a 30%, black 10%);
+        background: linear-gradient(110deg, #ffb03a 40%, black 30%);
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-bg {
+        background: linear-gradient(110deg, #ffb03a 0 55%, black 50% 100%);
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-bg {
+        background: linear-gradient(110deg, #ffb03a 0 55%, black 55% 100%);
+    }
+}
+
+@media (max-width: 545px) {
+    .contact-bg {
+        background: linear-gradient(110deg, #ffb03a 60%, black 60%);
+    }
+}
+
+@media (max-width: 450px) {
+    .contact-bg {
+        background: linear-gradient(110deg, #ffb03a 70%, black 60%);
+    }
+}
+
+@media (max-width: 370px) {
+    .contact-bg {
+        background: linear-gradient(100deg, #ffb03a 80%, black 60%);
+    }
+
+    #contactInfoBtn {
+        padding-left: 13%;
+    }
+}
+
+@media (max-width: 259px) {
+    .contact-bg {
+        background: #ffb03a;
+    }
+
+    #contactInfoBtn {
+        padding-left: 0%;
     }
 }
